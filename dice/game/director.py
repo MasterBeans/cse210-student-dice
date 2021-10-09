@@ -1,10 +1,11 @@
 from game.thrower import Thrower
 
+
 class Director:
     """A code template for a person who directs the game. The responsibility of 
     this class of objects is to keep track of the score and control the 
     sequence of play.
-    
+
     Attributes:
         keep_playing (boolean): Whether or not the player wants to keep playing.
         score (number): The total number of points earned.
@@ -13,7 +14,7 @@ class Director:
 
     def __init__(self):
         """The class constructor.
-        
+
         Args:
             self (Director): an instance of Director.
         """
@@ -23,7 +24,7 @@ class Director:
 
     def start_game(self):
         """Starts the game loop to control the sequence of play.
-        
+
         Args:
             self (Director): an instance of Director.
         """
@@ -40,7 +41,7 @@ class Director:
             self (Director): An instance of Director.
         """
         self.thrower.throw_dice()
-        
+
     def do_updates(self):
         """Updates the important game information for each round of play. In 
         this case, that means updating the score.
@@ -50,7 +51,7 @@ class Director:
         """
         points = self.thrower.get_points()
         self.score += points
-        
+
     def do_outputs(self):
         """Outputs the important game information for each round of play. In 
         this case, that means the dice that were rolled and the score.
